@@ -90,9 +90,9 @@ fn core(input_image: &Mat, target_image: &mut Mat, config: &Config) -> Mat {
                     .at_2d_mut::<opencv::core::Vec3b>(y, x)
                     .unwrap()
                     .copy_from_slice(&[
-                        config.target_color.0,
-                        config.target_color.1,
                         config.target_color.2,
+                        config.target_color.1,
+                        config.target_color.0,
                     ]);
             } else {
                 target_image
